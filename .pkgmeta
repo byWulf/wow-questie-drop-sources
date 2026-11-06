@@ -1,0 +1,5 @@
+package-as: QuestieDropSources
+
+ignore:
+  - AGENTS.md
+  - CLAUDE.md

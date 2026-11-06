@@ -3,7 +3,7 @@
 ## Notes: Shows all three Questie drop rate sources (corrections, CMaNGOS, Wowhead) in the tooltip and highlights the one Questie uses.
 ## Notes-deDE: Zeigt im Tooltip alle drei Questie-Dropchancen (Korrektur, CMaNGOS, Wowhead) und hebt die von Questie genutzte hervor.
 ## Author: byWulf
-## Version: 1.0.0
+## Version: @project-version@
 ## X-License: MIT
 ## X-Curse-Project-ID: 1787611
 ## Dependencies: Questie

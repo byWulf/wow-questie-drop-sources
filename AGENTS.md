@@ -31,3 +31,13 @@ After changing the `.toc` or the `.lua`, copy them to the Forever installation. 
 ## Testing
 
 There is no automated test setup. Changes are verified in game with `/reload` on an NPC that drops an item for an active quest; Lua errors show up with `/console scriptErrors 1`. A syntax check is possible with `luajit -bl QuestieDropSources.lua`.
+
+## Releasing
+
+Published on CurseForge as project `1787611` (https://www.curseforge.com/wow/addons/questie-drop-sources) and as GitHub releases. Releases are built by `.github/workflows/release.yml` with the BigWigs packager (`.pkgmeta` sets the folder name and leaves out `AGENTS.md`/`CLAUDE.md`):
+
+1. Commit and push the changes to `main`.
+2. Tag and push: `git tag -a vX.Y.Z -m "X.Y.Z"` and `git push origin vX.Y.Z` (semantic versioning).
+3. The workflow packages the addon, replaces `@project-version@` in the TOC with the tag, uploads the zip to CurseForge (game version from the TOC interface, WoW Forever) and creates the GitHub release. The changelog is generated from the commit messages since the previous tag.
+
+The CurseForge upload needs the repository secret `CF_API_TOKEN` (a CurseForge author API token). "Run workflow" on the Actions tab builds the package as an artifact without uploading. Never edit `## Version` in the TOC by hand; installed dev copies show `@project-version@`.

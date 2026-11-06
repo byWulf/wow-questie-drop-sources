@@ -30,24 +30,31 @@ No configuration and no Questie debug mode needed. If you turn off drop rates in
 
 | Version | Interface |
 |---|---|
-| WoW Classic Era | 11509 |
-| WoW Classic Forever | 16001 |
+| WoW Forever | 16001 |
 
-Requires Questie. Tested with Questie 12.0.4 (Classic Era) and 12.3.1 (Forever). The addon hooks into Questie internals, so a future Questie update may break it; in that case the tooltip simply falls back to Questie's own drop rate.
+Classic Era and other versions are not supported.
+
+Requires Questie. Tested with Questie 12.3.1. The addon hooks into Questie internals, so a future Questie update may break it; in that case the tooltip simply falls back to Questie's own drop rate.
 
 ## Installation
 
-The folder in your AddOns directory **must** be named `QuestieDropSources`, otherwise WoW will not load the addon:
+Install it from [CurseForge](https://www.curseforge.com/wow/addons/questie-drop-sources), e.g. with the CurseForge app.
+
+For a manual installation, note that the folder in your AddOns directory **must** be named `QuestieDropSources`, otherwise WoW will not load the addon:
 
 ```bash
-cd "C:/Program Files (x86)/World of Warcraft/_classic_era_/Interface/AddOns"
+cd "C:/Program Files (x86)/World of Warcraft/_forever_/Interface/AddOns"
 git clone https://github.com/byWulf/wow-questie-drop-sources.git QuestieDropSources
 ```
 
-For Forever, use `_forever_/Interface/AddOns` instead. Alternatively, download the repository as a ZIP and extract its contents to `Interface/AddOns/QuestieDropSources/`.
+Alternatively, download the ZIP from the [releases](https://github.com/byWulf/wow-questie-drop-sources/releases) and extract it into `Interface/AddOns`.
 
 Then restart WoW (or log out) and enable the addon in the AddOns list.
 
 ## Limitations
 
 If an NPC drops several items for your active quests, each tooltip line is matched to its item by the item name in that line. If that doesn't work, the line keeps Questie's original drop rate.
+
+## License
+
+MIT, see [LICENSE](LICENSE).

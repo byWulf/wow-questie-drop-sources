@@ -1,9 +1,11 @@
-## Interface: 11509, 16001
+## Interface: 16001
 ## Title: Questie Drop Sources
 ## Notes: Shows all three Questie drop rate sources (corrections, CMaNGOS, Wowhead) in the tooltip and highlights the one Questie uses.
 ## Notes-deDE: Zeigt im Tooltip alle drei Questie-Dropchancen (Korrektur, CMaNGOS, Wowhead) und hebt die von Questie genutzte hervor.
 ## Author: byWulf
 ## Version: 1.0.0
+## X-License: MIT
+## X-Curse-Project-ID: 1787611
 ## Dependencies: Questie
 ## IconTexture: Interface\Icons\INV_Misc_Bag_10
 

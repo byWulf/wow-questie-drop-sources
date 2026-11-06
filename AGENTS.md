@@ -8,7 +8,7 @@ All documentation in this repository (README, AGENTS.md, code comments, commit m
 
 WoW addon `QuestieDropSources`: a companion to [Questie](https://github.com/Questie/Questie). Questie shows one drop rate per quest item in NPC tooltips and picks it from three sources in a fixed order (manual corrections, then private server data like CMaNGOS, then Wowhead). This addon replaces that single value with all three sources, each with Questie's source icon. The source Questie used is white, the others grey.
 
-- `QuestieDropSources.toc`: addon manifest, interface `11509` (Classic Era) and `16001` (Classic Forever), `Dependencies: Questie` so it loads after Questie
+- `QuestieDropSources.toc`: addon manifest, interface `16001` (WoW Forever only, Classic Era is not supported), `Dependencies: Questie` so it loads after Questie
 - `QuestieDropSources.lua`: everything else
 
 How it hooks into Questie (all via the global `QuestieLoader:ImportModule`):
@@ -24,10 +24,9 @@ These hooks depend on Questie internals. After a Questie update, check that the 
 
 The addon is installed as a plain copy (not a clone) in:
 
-- `C:\Program Files (x86)\World of Warcraft\_classic_era_\Interface\AddOns\QuestieDropSources`
 - `C:\Program Files (x86)\World of Warcraft\_forever_\Interface\AddOns\QuestieDropSources`
 
-After changing the `.toc` or the `.lua`, copy them to both installations. The folder name must stay `QuestieDropSources`.
+After changing the `.toc` or the `.lua`, copy them to the Forever installation. The folder name must stay `QuestieDropSources`.
 
 ## Testing
 
